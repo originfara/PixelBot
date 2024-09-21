@@ -31,7 +31,7 @@ def post_request():
             print("POST-запрос успешен")
         else:
             print(f"Ошибка POST-запроса: {response.status_code}")
-        time.sleep(600)  # Пауза 600 секунд
+        time.sleep(200)  # Пауза 600 секунд
 
 # Функция для GET-запроса
 def get_request():
