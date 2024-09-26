@@ -4,8 +4,9 @@ import threading
 
 # URL и заголовки для POST-запроса
 post_url = "https://notpx.app/api/v1/repaint/start"
+initData = "initData user=%7B%22id%22%3A608927977%2C%22first_name%22%3A%22TOF%F0%9F%90%B8%F0%9F%AA%A8%F0%9F%8C%B1%22%2C%22last_name%22%3A%22%22%2C%22username%22%3A%22thetofix%22%2C%22language_code%22%3A%22ru%22%2C%22allows_write_to_pm%22%3Atrue%7D&chat_instance=1621039160858601012&chat_type=sender&auth_date=1727388541&hash=cf4a39a949e9e7484bbaf77616e67245203fba0dd21c9966fa44df158b5647d1"
 post_headers = {
-    "Authorization": "initData user=%7B%22id%22%3A608927977%2C%22first_name%22%3A%22TOF%F0%9F%90%B8%22%2C%22last_name%22%3A%22%22%2C%22username%22%3A%22thetofix%22%2C%22language_code%22%3A%22ru%22%2C%22allows_write_to_pm%22%3Atrue%7D&chat_instance=1621039160858601012&chat_type=sender&auth_date=1726987761&hash=5337b4b0eed24462ede2997a783b57acae199282cb17ab6d03432d6100254ef2",
+    "Authorization": initData,
     "Content-Type": "application/json",
     "Accept": "application/json, text/plain, */*",
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0",
@@ -18,10 +19,12 @@ post_data = {
 # URL и заголовки для GET-запроса
 get_url = "https://notpx.app/api/v1/mining/claim"
 get_headers = {
-    "Authorization": "initData user=%7B%22id%22%3A608927977%2C%22first_name%22%3A%22TOF%F0%9F%90%B8%22%2C%22last_name%22%3A%22%22%2C%22username%22%3A%22thetofix%22%2C%22language_code%22%3A%22ru%22%2C%22allows_write_to_pm%22%3Atrue%7D&chat_instance=1621039160858601012&chat_type=sender&auth_date=1726987761&hash=5337b4b0eed24462ede2997a783b57acae199282cb17ab6d03432d6100254ef2",
+    "Authorization": initData,
     "Accept": "application/json, text/plain, */*",
     "User-Agent": "Mozilla/5.0 (Linux; Android 13; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.6613.146 Mobile Safari/537.36"
 }
+
+
 
 # Функция для POST-запроса
 def post_request():
